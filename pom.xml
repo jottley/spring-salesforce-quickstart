@@ -71,6 +71,12 @@
 		</license>
 	</licenses>
 
+    <scm>
+		<url>https://github.com/jottley/spring-salesforce-quickstart</url>
+		<connection>scm:git:git@github.com:jottley/spring-salesforce-quickstart.git</connection>
+		<developerConnection>scm:git:git@github.com:jottley/spring-salesforce-quickstart.git</developerConnection>
+    </scm>
+
     <repositories>
         <repository>
             <id>repsy</id>
