@@ -84,4 +84,12 @@
         </repository>
     </repositories>
 
+    <distributionManagement>
+        <repository>
+            <id>repsy</id>
+            <name>spring-salesforce</name>
+            <url>https://repo.repsy.io/mvn/jottley/spring-salesforce</url>
+        </repository>
+    </distributionManagement>
+
 </project>
