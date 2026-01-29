@@ -3,53 +3,56 @@
 >
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.springframework.social</groupId>
-	<artifactId>spring-social-salesforce-quickstart</artifactId>
-	<version>1.2.2.BUILD-SNAPSHOT</version>
+	<groupId>org.springframework</groupId>
+	<artifactId>spring-salesforce-quickstart</artifactId>
+	<version>2.0.0-SNAPSHOT</version>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.8.RELEASE</version>
+		<version>4.0.2</version>
+        <relativePath/>
 	</parent>
 
 	<name>spring-social-salesforce-quickstart</name>
 	<url>https://github.com/jottley/spring-social-salesforce-quickstart</url>
 
-	<repositories>
-		<repository>
-			<id>jcenter</id>
-			<url>https://jcenter.bintray.com</url>
-		</repository>
-	</repositories>
-
 	<properties>
-		<java.version>1.8</java.version>
-		<salesforce.version>1.2.2.RELEASE</salesforce.version>
-		<inject.version>1</inject.version>
+		<java.version>21</java.version>
+		<spring.salesforce.version>2.0.0</spring.salesforce.version>
 	</properties>
 
 	<dependencies>
+
+     <dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-actuator</artifactId>
+     </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-oauth2-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-salesforce</artifactId>
+			<version>${spring.salesforce.version}</version>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.social</groupId>
-			<artifactId>spring-social-salesforce</artifactId>
-			<version>${salesforce.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>javax.inject</groupId>
-			<artifactId>javax.inject</artifactId>
-			<version>${inject.version}</version>
-		</dependency>
+
 		<dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-	</dependencies>
+ </dependencies>
 
 	<build>
 		<plugins>
@@ -67,5 +70,13 @@
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
+
+    <repositories>
+        <repository>
+            <id>repsy</id>
+            <name>spring-salesforce</name>
+            <url>https://repo.repsy.io/mvn/jottley/spring-salesforce</url>
+        </repository>
+    </repositories>
 
 </project>
